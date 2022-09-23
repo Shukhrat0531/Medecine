@@ -1,0 +1,223 @@
+/* .icon{
+    background: url("../imgs/bag.jpg");
+    height: 145px;
+}
+.icon span img{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.menu-bar{
+    background: rgb(6, 143, 255);
+    align-items: center;
+    display: none;
+    
+}
+.menu-bar ul{
+    display: inline-block;
+}
+.menu-bar ul li{
+    margin-left: 20px;
+    width: 140px;
+}
+.my ul li:hover .menu-bar{
+    display: block;
+} */
+body{
+    margin: 0;
+    padding: 0;
+}
+.collapse ul li{
+    margin-left: 40px;
+    
+}
+.container-fluid{
+    align-items: center;
+}
+.contact{
+    width: 132px;
+    height: 50px;
+}
+.navbar-brand{
+    margin-left: 80px;
+}
+
+.pos{
+    margin-left: 20%;
+}
+.nav-link{
+    
+    margin-left: 20px;
+}
+.ferst_page{
+    background: url("../img/elip.png") no-repeat;
+    display: flex;
+    background-position: right bottom;
+}
+.jumbotron{
+    margin: auto;
+  
+
+}
+.img{
+   max-width: 670px;
+    
+}
+.card1{
+    width: 287px;
+    height: 226px;
+    background-color: white;
+   
+    border:3px solid blue;
+    border-bottom:none;
+    border-right: none;
+    border-left: none;
+    margin: 15px;
+}
+.card1 img{
+    margin-left: 15%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.card1 p{
+    padding: 5px 20px;
+    color: gray;
+    font-size: 300;
+    
+
+}
+.card_container{
+    display:flex;
+}
+.step{
+    margin-top: 18px;
+}
+
+
+
+
+.mini_container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 15px;
+	margin-top: 30px;
+}
+
+.flex_elem{
+	display: flex;
+
+}
+.span{
+	grid-column: span 2;
+
+}
+.mini_item{
+	width: 350px;
+	height: 320px;
+    cursor: pointer;
+}
+.item_width{
+		width: 730px;
+	height: 320px;
+}
+.span h2{
+	padding: 25px;
+}
+.mini_item p{
+	font-size: 16px;
+	padding: 15px;
+
+	color: gray;
+	font-family: 'Lora', serif;
+}
+.mini_item h6{
+	font-size: 22px;
+	font-weight: 500;
+	margin: 10px;
+	font-family: 'Lora', serif;
+}
+.footer{
+    display: flex;
+    
+}
+.maps_contac{
+    margin: auto;
+    color: white;
+  
+}
+.bgron{
+    background-color: #6b00ff;
+    padding: 50px;
+}
+
+.maps{
+    border: 3px solid white;
+    border-radius: 50px;
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    margin-left: 40px;
+    padding: 10px;
+   
+    
+}   
+
+html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+       
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+   .border_r{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+   }
+   .card-text{
+    color: #8A8A8A;
+    font-weight: 300;
+    font-size: 16px;
+   }
+.card{
+    border: none;
+}
