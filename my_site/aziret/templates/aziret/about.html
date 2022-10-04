@@ -8,59 +8,103 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Med</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
 </head>
 <body>
    
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'index'%}">Healhty<span class="text-primary">Carely</span> </a>
+      <a class="navbar-brand media_zap" href="{% url 'index'%}">Реабилитационный<span class="text-primary">центр № 1</span> </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">О нас </a>
+            <a class="nav-link active" aria-current="page" href="{% url 'about'%}">О нас </a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="#">Закупки</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+          <li class="nav-item ">
+            <a class="nav-link active" href="{% url 'naseleniya'%}" tabindex="-1" aria-disabled="true">Иновация</a>
+
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">services</a>
+            <a class="nav-link active" href="{% url 'naseleniya'%}" tabindex="-1" aria-disabled="true">Населению</a>
           </li>
         </ul>
         
       </div>
     </div>
   </nav>
-
-
-<div class="container">
-  <footer >
-    <div class="footer">
-    <div class="maps"><iframe width="80%"   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47215.23308789378!2d69.7339576779171!3d42.30088817269691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a8e0ce7e8dc53b%3A0x880489cf70d10323!2z0KHQsNC50YDQsNC8!5e0!3m2!1sru!2skz!4v1663777374536!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-    <div class="maps_contac">
-      <h2>Контакты </h2>
-      <p>ГККП Реабилизатционный центр 1</p>
-      <p><b>  Адрес:</b> РК.г Шымкент ул лисбек батыра 112А </p>
-      <p>Email: shuhrat0531@gmail.com</p>
-      <button>1415</button>
-      <button>57-08-35</button>
+ <h2 align="center" class="nashi">Наши Введения</h2>
+  <div id="carouselExampleCaptions" class="carousel slide w-50 h-100 mx-auto  mt-40" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active ">
+        <img src="{% static 'img/image 3.png'%}" class="d-block  w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item w-100  ilem">
+        <img src="{% static 'img/image 3.png'%}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/image 3.png'%}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  </footer>
-</div>
+
+
+  <h2 align="center">Kratko o nas</h2>
+  <p class="w-50 mx-auto fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, molestias modi laboriosam magnam ab ipsam cumque molestiae, inventore culpa reprehenderit fuga repudiandae nam omnis adipisci quos blanditiis optio corrupti et placeat est dolor sunt quo rerum. Provident, quos. Velit repellendus ullam aspernatur repellat ut facilis reiciendis, dolorum mollitia laboriosam, distinctio quia eaque odit quidem ratione pariatur dicta suscipit est beatae veniam ex sed rerum qui ipsum? Officia iure praesentium odit dicta quos! Id blanditiis vitae nisi sint similique delectus explicabo sequi, rem a quasi nulla perferendis minus sunt magnam aliquam? Totam suscipit, illo odit, aspernatur dicta magni ipsam mollitia, obcaecati ad similique sed quam. Eaque amet rem aliquam, ipsam illum debitis, perspiciatis sint nobis eveniet voluptate illo labore architecto! Velit alias rem ab eos id, nisi animi laudantium libero, fugiat iure possimus soluta? Non magni officiis facere ad eaque iste corrupti quaerat ab eligendi natus debitis, enim tempore necessitatibus veritatis voluptas ducimus assumenda iusto, minima incidunt provident, facilis qui suscipit consequatur! Necessitatibus culpa repellat recusandae obcaecati neque cum quis sit magni officiis molestias rerum sed, cupiditate rem ex eveniet suscipit blanditiis provident veritatis iusto! Facere deleniti cumque inventore expedita ipsum hic, laboriosam harum nam dolores doloremque nisi, consectetur eveniet vel!</p>
+
+
+
+
+  <div class="container bgron">
+    <footer >
+      <div class="footer">
+      <div class="maps0"><iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47215.23308789378!2d69.7339576779171!3d42.30088817269691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a8e0ce7e8dc53b%3A0x880489cf70d10323!2z0KHQsNC50YDQsNC8!5e0!3m2!1sru!2skz!4v1663777374536!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <div class="maps_contac">
+        <h2>Контакты </h2>
+        <p>ГККП Реабилизатционный центр 1</p>
+        <p><b>  Адрес:</b> РК.г Шымкент ул лисбек батыра 112А </p>
+        <p>Email: shuhrat0531@gmail.com</p>
+        <button class="botn">1415</button>
+        <button class="botn">57-08-35</button>
+      </div>
+    </div>
+    </footer>
+  </div>
         
 
 

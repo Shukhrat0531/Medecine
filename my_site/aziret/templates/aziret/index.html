@@ -17,7 +17,7 @@
    
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Реабилитационный<span class="text-primary">центр № 1</span> </a>
+      <a class="navbar-brand media_zap" href="{% url 'index'%}">Реабилитационный<span class="text-primary">центр № 1</span> </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,19 +29,12 @@
           <li class="nav-item">
             <a class="nav-link active" href="#">Закупки</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Прес-центр
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+          <li class="nav-item ">
+            <a class="nav-link active" href="{% url 'naseleniya'%}" tabindex="-1" aria-disabled="true">Иновация</a>
+
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Населению</a>
+            <a class="nav-link active" href="{% url 'naseleniya'%}" tabindex="-1" aria-disabled="true">Населению</a>
           </li>
         </ul>
         
@@ -108,41 +101,31 @@
   </div>
 </div>
 
-<h2 align="center">Наши Сотрудники</h2>
-<div class="sotrudniki">
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="card" style="width: 18rem;">
-          <img class="border_r" src="{% static 'img/shuhrat.jpg'%}" class="card-img-top" alt="...">
-            <div class="card-body">
-             <h5 class="card-title">Кочкаров Шухрат Мирзарахимович</h5>
-              <p class="card-text">Хирург </p>
-               <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-         <div class="card" style="width: 18rem;">
-          <img class="border_r" src="{% static 'img/183.jpg'%}" class="card-img-top" alt="...">
-            <div class="card-body">
-             <h5 class="card-title">Абдухалилова Эльмира Абдусабитовна</h5>
-              <p class="card-text"> Детский невропатолог</p>
-               <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
 
-</div>
+
+
+
+<div class="section_slide">
+  <section class="slider">
+    <p class="sliderHeading">
+      <h2 align="center" class="sotrudnik">Наши Сотрудники</h2></p>
+    <div class="slider-card-container">
+      {% for people in peoples%}
+      <div class="slider-card">
+      <a href="f/{{ people.id }}">
+      <img src="{{people.img.url}}" alt="">
+      <h1 class="cardheading">{{people.title}} </h1>
+      <span>{{people.sub_title}}  </span>
+     
+      </a>
+  </div>
+      {% endfor %}
+     
+    </div>
+</section>
+</div>  
+
+
 
 
 <div class="container">
@@ -155,30 +138,22 @@
            <img src="{% static 'img/Rectangle 38.png'%}" alt="">
          </div>
          <div class="item_element big_item2">
-           <h2>Google I / O 2020 news update</h2>
-           <p>Out of concern for the health and safety of our developers, employees, and local communities — and in line with recent ...</p>
-
+           <h6 class="med_cen" align="ceneter">Кратко о нашем медцентре </h6>
+           <p>Оказани качественной консультативного диагностической помощи пациентам с использавания современных методов диагностики  и лечения </p>
          </div>
        </div>
+       {% for new in news %}
        <div class="mini_item big_item">
-         <img src="{% static 'img/Rectangle 39(3).png'%}" alt="">
-         <h6>Minimal workspace for inspirations</h6>
-         <p>Anthony Masional</p>
+        <a href="news/{{ new.id }}">
+         <img width="100%" src="{{new.imgs.url}}" alt="">
+         <h6>{{new.title}}</h6> </a>
+         <p>{{new.avtor}}</p>
+       
        </div>
-       <div class="mini_item">
-         <img src="{% static 'img/Rectangle 39(1).png'%}" alt="">
-         <h6>Does productivity increase when working remotely ? </h6>
-         <p>Anthony Masional</p>
-       </div>
-       <div class="mini_item">
-         <img src="{% static 'img/Rectangle 39.png'%}" alt="">
-         <h6>Morning routine to boost your mood</h6>
-         <p>Anthony Masional</p>
-       </div>
-       <div class="mini_item"><img src="{% static 'img/Rectangle 39(3).png'%}" alt="">
-         <h6>5+ tips to find comfortable co-working space</h6>
-         <p>Anthony Masional</p></div>
-    </div>
+       {% endfor %}
+       
+   
+ </div>
   </div>
   
 </div>
@@ -187,6 +162,8 @@
 </div>
 </div>	
 </div>
+
+
 
 <div class="container bgron">
   <footer >
@@ -197,8 +174,8 @@
       <p>ГККП Реабилизатционный центр 1</p>
       <p><b>  Адрес:</b> РК.г Шымкент ул лисбек батыра 112А </p>
       <p>Email: shuhrat0531@gmail.com</p>
-      <button>1415</button>
-      <button>57-08-35</button>
+      <button class="botn">1415</button>
+      <button class="botn">57-08-35</button>
     </div>
   </div>
   </footer>
