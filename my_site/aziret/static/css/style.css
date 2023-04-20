@@ -413,5 +413,17 @@ a{
       font-size: 16px;
     }
 }
-
-
+.tovar{
+  display: flex;
+  height: 400px;
+  width: 120px;
+}
+.tovar ul{
+  text-decoration: none;
+}
+.items{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}

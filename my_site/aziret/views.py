@@ -1,9 +1,12 @@
 from operator import index
 from urllib import request
 from django.shortcuts import render
+from django.shortcuts import redirect
 from django.http import HttpResponse
 
 from .models import News, Peoples
+
+from .models import Product
 
 
 
@@ -37,3 +40,55 @@ def detailist(request,pk):
 
 
 
+
+def product_list(request):
+    products = Product.objects.all()
+    context = {
+        'products': products,
+    }
+    return render(request, 'aziret/zakup.html', context)
+
+from django.shortcuts import render, get_object_or_404
+from .models import Product, Order
+from .forms import OrderForm
+
+def product_detail(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = OrderForm(request.POST)
+        if form.is_valid():
+            order = form.save(commit=False)
+            order.product = product
+            order.user = request.user
+            order.save()
+            return redirect('order_confirmation')
+    else:
+        form = OrderForm()
+    context = {
+        'product': product,
+        'form': form,
+    }
+    return render(request, 'product_detail.html', context)    
+
+
+from django.shortcuts import render, get_object_or_404
+from .models import Product, Order
+from .forms import OrderForm
+
+def order_product(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = OrderForm(request.POST)
+        if form.is_valid():
+            order = form.save(commit=False)
+            order.product = product
+            order.user = request.user
+            order.save()
+            return redirect('/')
+    else:
+        form = OrderForm()
+    context = {
+        'product': product,
+        'form': form,
+    }
+    return render(request, 'aziret/product_detail.html', context)    
