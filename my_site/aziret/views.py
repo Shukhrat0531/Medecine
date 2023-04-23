@@ -33,6 +33,9 @@ def press(request):
 def zakup(request):
     return render(request,"aziret/zakup.html")
 
+def ecomin(request):
+    return render(request,"aziret/ekozere.html")
+
 def detailist(request,pk):
     peoples =Peoples.objects.get(id=pk)
 

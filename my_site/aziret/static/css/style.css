@@ -34,13 +34,50 @@ body{
     align-items: center;
 }
 .contact{
-    width: 132px;
+    width: 242px;
     height: 50px;
 }
 .navbar-brand{
     margin-left: 80px;
 }
-
+.eco img{
+  width: 200px;
+}
+.eco{
+  display: flex;
+  justify-content: space-around;
+}
+.eco_cont{
+  width: 550px;
+}
+.bg{
+  
+  display: flex;
+      margin-top: -50px;
+  height: 100vh;
+/* Масштабирование фото по размерам div */
+  background-position: center center; 
+  background-image: url('../img/main-banner.jpeg');
+  justify-content: space-around;
+}
+.marg{
+  margin-top: 100px;
+  margin-bottom: 90px;
+  padding: 20px;
+  background-color: aquamarine;
+  color: white;
+  border-radius: 50px;
+  font-weight: 400;
+  text-align: center;
+  
+}
+.marg h3{
+  color: #000;
+}
+.marg p{
+  text-shadow: 2px 2px 2px solid black;
+  font-size: 19px;
+}
 .pos{
     margin-left: 20%;
 }
@@ -124,6 +161,15 @@ body{
 		width: 730px;
 	height: 320px;
 }
+.sub_btn{
+        height: 38px;
+    width: 145px;
+    border: 0;
+    color: white;
+    font-weight: 500;
+    background-color: black;
+    border-radius: 8px;
+      }
 
 .mini_item p{
 	font-size: 16px;

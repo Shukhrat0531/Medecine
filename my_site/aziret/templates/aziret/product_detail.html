@@ -30,6 +30,15 @@
         display: block; /* Устанавливает изображение как блочный элемент */
         margin: 0 auto; /* Устанавливает автоматические отступы по вертикали и по горизонтали */
       }
+      .sub_btn{
+        height: 38px;
+    width: 145px;
+    border: 0;
+    color: white;
+    font-weight: 500;
+    background-color: black;
+    border-radius: 8px;
+      }
     </style>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -67,7 +76,7 @@
         <form method="POST" action="{% url 'order_product' product.id %}">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Оставить заявку</button>
+        <button class="sub_btn" type="submit">Оставить заявку</button>
     </form>
             </li>
         </ul>
